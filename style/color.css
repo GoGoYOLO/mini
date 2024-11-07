@@ -1,0 +1,35 @@
+.theme {
+  color: #ff7a00;
+}
+
+.theme-back {
+  background-color: #ff7a00;
+}
+
+.theme-border {
+  border: 1px solid #ff9000;
+}
+
+.white {
+  color: #fff;
+}
+
+.white-back {
+  background-color: #fff;
+}
+
+.clr_000 {
+  color: #000000;
+}
+
+.clr_333 {
+  color: #333333;
+}
+
+.clr_666 {
+  color: #666666;
+}
+
+.clr_999 {
+  color: #999999;
+}

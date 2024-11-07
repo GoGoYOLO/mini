@@ -1,0 +1,68 @@
+开始转换……
+小程序路径:  /Users/aiguojiang11/Desktop/其他/mini-project/mini
+搜索到44个文件(含目录)，耗时：2ms
+
+开始分析文件
+分析文件信息完成，共12组数据
+开始转换文件组为vue文件
+
+[ERROR]这个页面的js的结构写法无法解析(可能有语法问题)，请修复后再试。   fileKey: unpackage/dist/dev/mp-weixin/common/vendor
+
+[ERROR]这个页面的js的结构写法无法解析(可能有语法问题)，请修复后再试。   fileKey: unpackage/dist/dev/mp-weixin/common/vendor
+
+[ERROR]这个页面的js的结构写法无法解析(可能有语法问题)，请修复后再试。   fileKey: unpackage/dist/dev/mp-weixin/common/vendor
+[ERROR]App异常情况： app.js结构太复杂，请调整为App({})这种单一结构再试
+file:unpackage/dist/dev/mp-weixin/common/vendor
+ (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"], [
+  /* 0 */
+
+  /* 27 */
+  /* 28 */
+  /* 29 */
+  /* 30 */
+  /* 31 */
+, ( /* 1 */
+/*!*********************************************************!*\
+  !*** ./node_modules/@dc
+[ERROR]App异常情况(建议把源代码修改为简单结构，如App({})，再尝试转换)
+file:unpackage/dist/dev/mp-weixin/common/vendor
+ (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"], [
+  /* 0 */
+
+  /* 27 */
+  /* 28 */
+  /* 29 */
+  /* 30 */
+  /* 31 */
+, ( /* 1 */
+/*!*********************************************************!*\
+  !*** ./node_modules/@dc
+开始二次遍历及生成vue文件
+write pages.json success!
+write manifest.json success!
+write main.js success!
+write package.json success!
+
+
+统计信息：
+
+Component数量: 0
+Page数量: 0
+支付api数量: 0
+登录api数量: 0
+chooseMedia数量: 0
+getLocation数量: 0
+getRelationNodes数量: 0
+<ad/>数量: 0
+<map/>数量: 0
+<video/>数量: 0
+Vant组件: ， 数量：0
+用时: 10.32s
+
+使用说明：
+    1.因各种原因，本工具并非100%完美转换！部分语法仍需人工处理！
+    2.工具转换原理及说明文档参考：https://l4rz4zwpx7.k.topthink.com/@kmrvzg72lx/
+    3.如遇运行报错，请添加QQ群(五群：536178289)带图反馈或https://github.com/zhangdaren/miniprogram-to-uniapp提交Issue！
+    4.转换后请查阅_uni目录或_uni-cli目录里的 README.md 和 transform.log
+
+
