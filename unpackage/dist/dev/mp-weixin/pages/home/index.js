@@ -147,6 +147,9 @@ var tabbar = function tabbar() {
 var _default = {
   components: {
     tabbar: tabbar
+  },
+  data: function data() {
+    return {};
   }
 };
 exports.default = _default;
