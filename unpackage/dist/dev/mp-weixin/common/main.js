@@ -93,32 +93,124 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
 
-
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-//
-//
-//
-//
-//
-//
-//
-//
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 58));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 60));
+var storage = __webpack_require__(/*! ./utils/storage.js */ 62);
 var _default = {
+  globalData: {
+    system_info: {},
+    position: {},
+    user_info: {}
+  },
   onLaunch: function onLaunch() {
-    console.log('App Launch');
+    this.getSystemInfo();
+    this.getCurrentLocation();
+    // this.getUserProfile()
   },
-  onShow: function onShow() {
-    console.log('App Show');
-  },
-  onHide: function onHide() {
-    console.log('App Hide');
+
+  methods: {
+    checkLogin: function checkLogin() {
+      var userInfo = storage.getUserInfo();
+      return !!userInfo;
+    },
+    getSystemInfo: function getSystemInfo() {
+      var _this = this;
+      var capsule = uni.getMenuButtonBoundingClientRect();
+      uni.getSystemInfo({
+        success: function success(res) {
+          _this.globalData.system_info = {
+            scrollTopHeight: capsule.bottom + capsule.top - res.statusBarHeight,
+            statusBarHeight: res.statusBarHeight,
+            winHeight: res.screenHeight,
+            winWidth: res.screenWidth,
+            windowWidth: res.windowWidth,
+            capsuleTop: capsule.top,
+            capsuleRight: capsule.width,
+            capsuleHeight: +(capsule.top - res.statusBarHeight) * 2 + capsule.height,
+            placeholderHeight: +(capsule.top - res.statusBarHeight) * 2 + capsule.height + res.statusBarHeight,
+            toBar: res.platform == 'android' ? 48 : 44,
+            platform: res.platform,
+            paddingBottom: res.screenHeight - res.safeArea.bottom,
+            navBarHeight: res.platform == 'android' ? 48 : 44 + res.statusBarHeight
+          };
+        },
+        fail: function fail(err) {
+          console.error(err);
+        }
+      });
+    },
+    getCurrentLocation: function getCurrentLocation() {
+      var _this2 = this;
+      var that = this;
+      return new Promise(function (resolve, reject) {
+        uni.getSetting({
+          success: function success(res) {
+            if (!Reflect.has(res.authSetting, 'scope.userLocation')) {
+              uni.getLocation({
+                type: 'gcj02',
+                altitude: false,
+                success: function () {
+                  var _success = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(result) {
+                    return _regenerator.default.wrap(function _callee$(_context) {
+                      while (1) {
+                        switch (_context.prev = _context.next) {
+                          case 0:
+                            _this2.globalData.position = {
+                              latitude: +result.latitude,
+                              longitude: +result.longitude
+                            };
+                          case 1:
+                          case "end":
+                            return _context.stop();
+                        }
+                      }
+                    }, _callee);
+                  }));
+                  function success(_x) {
+                    return _success.apply(this, arguments);
+                  }
+                  return success;
+                }(),
+                fail: function fail(err) {
+                  resolve();
+                }
+              });
+            } else {
+              resolve();
+            }
+          }
+        });
+      });
+    },
+    doWxLogin: function doWxLogin() {
+      var that = this;
+      return new Promise(function (resolve, reject) {
+        uni.getUserProfile({
+          desc: '用于完善会员资料',
+          success: function success(dataRes) {
+            uni.showLoading({
+              title: '登录中...'
+            });
+            console.log(dataRes);
+            return dataRes;
+          },
+          complete: function complete(err) {
+            console.log(err);
+          }
+        });
+      });
+    }
   }
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

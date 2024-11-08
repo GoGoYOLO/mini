@@ -135,21 +135,56 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 
 
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var tabbar = function tabbar() {
-  __webpack_require__.e(/*! require.ensure | components/CustomTabbar/index */ "components/CustomTabbar/index").then((function () {
-    return resolve(__webpack_require__(/*! @/components/CustomTabbar/index */ 57));
-  }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
-};
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 58));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 60));
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var app = getApp();
 var _default = {
-  components: {
-    tabbar: tabbar
-  },
   data: function data() {
     return {};
+  },
+  methods: {
+    onShow: function onShow() {
+      var _this = this;
+      return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                if (typeof _this.$scope.getTabBar === 'function' && _this.$scope.getTabBar()) {
+                  _this.$scope.getTabBar().setData({
+                    selected: 0
+                  });
+                }
+                console.log(app.globalData);
+                return _context.abrupt("return");
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    }
   }
 };
 exports.default = _default;

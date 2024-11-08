@@ -4,7 +4,12 @@
     "pages/mine/index"
   ],
   "subPackages": [],
-  "window": {},
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "backgroundColorBottom": "#F5F4F2"
+  },
   "tabBar": {
     "custom": true,
     "color": "#9C9891",

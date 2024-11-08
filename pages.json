@@ -31,6 +31,11 @@
       }
     ]
 	},
-	"globalStyle": {},
+	"globalStyle": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "backgroundColorBottom": "#F5F4F2"
+  },
 	"subPackages": []
 }

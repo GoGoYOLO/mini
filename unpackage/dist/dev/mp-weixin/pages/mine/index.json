@@ -1,7 +1,5 @@
 {
   "backgroundColorTop": "#ffffff",
   "backgroundColorBottom": "#ffffff",
-  "usingComponents": {
-    "tabbar": "/components/CustomTabbar/index"
-  }
+  "usingComponents": {}
 }

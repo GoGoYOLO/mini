@@ -1,1 +1,0 @@
-<view class="tabbar data-v-86f224e6"><block wx:for="{{tabbar_list}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view data-event-opts="{{[['tap',[['switchTab',[index]]]]]}}" class="tabbar-item data-v-86f224e6" bindtap="__e"><view class="{{['data-v-86f224e6',select_index===index?'theme':'']}}">{{item.text+select_index+index}}</view></view></block></view>
